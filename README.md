@@ -48,3 +48,5 @@ Data Pipeline Workflow:
    
 5. An Airflow DAG is created for aggregating the data using Spark SQL  and to index the data in ElasticSearch.
    This DAG is scheduled to every hourly.
+   
+6. During concecutive dag runs the data is append in elasticsearch and is not overwritten.
